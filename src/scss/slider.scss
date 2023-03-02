@@ -1,0 +1,249 @@
+// slider body (main slider)
+.slick-slider {
+}
+.slick-list {
+	overflow: visible;
+}
+.slick-dots li button {
+	font-size: 0px;
+}
+.slick-track {
+	display: flex;
+	align-items: center;
+	gap: 32px;
+	@media (max-width: $md2+px) {
+		gap: 0;
+	}
+}
+.controls-slider-main {
+	display: flex;
+	align-items: center;
+	// .controls-slider-main__dots
+	&__dots {
+		flex: 1 1 auto;
+		@media (min-width: $md2+px) {
+			// padding: 0px 20px 0px 0px;
+		}
+		@media (max-width: $md2+px) {
+			justify-content: center;
+		}
+	}
+	// .controls-slider-main__arrows
+	&__arrows {
+		@media (max-width: $md2+px) {
+			display: none;
+		}
+	}
+}
+// dots
+.controls-slider-main__dots {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	@media (max-width: $md2+px) {
+		justify-content: center;
+		padding: 30px 0 15px 0;
+	}
+}
+.slick-dots {
+	display: flex;
+	position: absolute;
+}
+.slick-dots li.slick-active  {
+	&::after {
+		background-color: $orangeColor;
+	}
+	&::before {
+		content: "";
+		cursor: pointer;
+		position: absolute;
+		align-items: center;
+		top: 0;
+		left: 0;
+		width: 27px;
+		height: 27px;
+		border-radius: 50%;
+		border: 1px solid $orangeColor;
+		transition: transform 0.3s ease 0s;
+		transform: scale(1);
+	}
+}
+.slick-dots li {
+	cursor: pointer;
+	flex: 0 0 27px;
+	height: 27px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 2px 0px;
+	&:not(:last-child) {
+		margin: 0 15px 0 0;
+	}
+	&::after {
+		content: "";
+		width: 11px;
+		height: 11px;
+		background-color: #d8d8d8;
+		border-radius: 50%;
+		transition: background-color 0.3s ease 0s;
+	}
+}
+// arrows
+.controls-slider-main__arrows {
+	display: grid;
+	grid-template-columns: repeat(2, 48px);
+	column-gap: 8px;
+}
+.slider-arrow {
+	pointer-events: auto;
+	border-radius: 50%;
+	height: 48px;
+	width: 48px;
+	background-color: rgba(232, 159, 113, 0.3);
+	color: $orangeColor;
+	font-size: 12px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+	&#main-slider-arrow-prev, &#room-slider-arrow-prev, &#tips-slider-arrow-prev{
+		&::before {
+			transform: rotate(90deg);
+		}
+	}
+	&#main-slider-arrow-next, &#room-slider-arrow-next, &#tips-slider-arrow-next {
+		&::before {
+			transform: rotate(-90deg);
+		}
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			color: #fff;
+			background-color: rgba(232, 159, 113, 1);
+		}
+	}
+	&_white {
+		box-shadow: 0px 4px 14px 1px rgba(0, 0, 0, 0.16);
+		background-color: #fff;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $orangeColor;
+				color: #fff;
+			}
+		}
+	}
+}
+
+
+// /* slider */
+// .slick-slider {
+// }
+// .slick-list {
+// }
+// /* Лента слайдов */
+// .slick-track {
+// }
+// /* Слайд */
+// .slick-slide {
+// }
+// /* Слайд активный (показывается) */
+// .slick-slide.slick-active {
+// }
+// /* Слайд основной */
+// .slick-slide.slick-current {
+// }
+// /* Слайд по центру */
+// .slick-slide.slick-center {
+// }
+// /* Клонированный слайд */
+// .slick-slide.slick-cloned {
+// }
+// /* Стрелка */
+// .slick-arrow {
+// }
+// /* Стрелка влево */
+// .slick-arrow.slick-prev {
+// }
+// /* Стрелка вправо */
+// .slick-arrow.slick-next {
+// }
+// /* Стрелка не активная */
+// .slick-arrow.slick-disabled {
+// }
+// /* Точки (булиты) */
+// .slick-dots {
+// }
+// .slick-dots li {
+// }
+// /* Активная точка */
+// .slick-dots li.slick-active {
+// }
+// /* Элемент точки */
+// .slick-dots li button {
+// }
+
+
+// mine
+
+// .slick-arrow{
+	// position: absolute;
+	// position: relative;
+
+	// display: flex;
+	// top: -45px;
+	// z-index: 23;
+	// font-size: 12px;
+	// pointer-events: auto;
+	// border-radius: 50%;
+	// width: 48px;
+	// height: 48px;
+	// color: $orangeColor;
+	// background-color: rgba(232, 159, 113, 0.3);
+	// // font-size: 12px;
+	// cursor: pointer;
+	// transition: all 0.3s ease 0s;
+	// &::before {
+	// 	position: absolute;
+	// 	display: flex;
+	// 	align-items: center;
+	// 	justify-content: center;
+	// 	content: "";
+	// 	background: url("@img/icons/arrow-down.svg") no-repeat;
+	// 	color: #fff;
+	// 	top: 0;
+	// 	left: 0;
+	// 	z-index: 12;
+	// }
+	// @media (any-hover: hover) {
+	// 	&:hover {
+	// 		color: #fff;
+	// 		background-color: rgba(232, 159, 113, 1);
+	// 	}
+	// }
+	// &_white {
+	// 	box-shadow: 0px 4px 14px 1px rgba(0, 0, 0, 0.16);
+	// 	background-color: #fff;
+	// 	@media (any-hover: hover) {
+	// 		&:hover {
+	// 			background-color: $orangeColor;
+	// 			color: #fff;
+	// 		}
+	// 	}
+	// }
+// }
+// button .slick-prev.slick-arrow {
+// 		// &::after {
+// 		position: absolute;
+// 		top: 0;
+// 		left: 0;
+// 		content: '';
+// 		background: url('@img/icons/arrow-down.svg') no-repeat;
+// 		transform: rotate(90deg);
+// 		z-index: 32;
+// 	// }
+// }
+// .slick-next {
+// 	&::before {
+// 		// background: url('..img/icons/arrow-down.svg') no-repeat;
+// 		transform: rotate(-90deg);
+// 	}
+// }
