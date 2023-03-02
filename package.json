@@ -6,7 +6,6 @@
 	"type": "module",
 	"scripts": {
 		"dev": "gulp",
-		"svgSprite": "gulp svgSpriteTask"
 	},
 	"author": "i663",
 	"license": "ISC",
