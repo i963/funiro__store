@@ -23,7 +23,7 @@ import { json } from "./gulp/tasks/json.js";
 import { otfToTtf, ttfToWoff, fontsStyle } from "./gulp/tasks/fonts.js";
 import { svgSpriteTask } from "./gulp/tasks/svg_sprite.js";
 import { zip } from "./gulp/tasks/zip.js";
-import { ftp } from "./gulp/tasks/ftp.js";
+// import { ftp } from "./gulp/tasks/ftp.js";
 
 export { html }
 export { scss }
